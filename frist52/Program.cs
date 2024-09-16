@@ -6,5 +6,5 @@ Double degrees = double.Parse(Console.ReadLine());
 
 
 Console.Write("Resulte fahrenheit =");
-Console.Write(degrees * 1.800000 + 32);
-Math.Round(degrees);
+Console.Write(degrees * 1.8 + 32);
+object value = Math.Round(int degrees);
