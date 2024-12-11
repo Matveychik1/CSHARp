@@ -1,56 +1,14 @@
-//using System.ComponentModel;
-
-//Console.WriteLine("Enter your email:");
-//string email = Console.ReadLine();
-
-
-//if (email.Contains("@") && email.Contains(".")) 
-//{
-//    Console.WriteLine("GOOD EMAIL VASIL");
-//}
-
-//else
-//{
-//    Console.WriteLine("TU SHO Dyrniy nepravilno");
-//}
-
-
-//------------------------------2--------------------///
-
-
-//Console.WriteLine("Enter your name:");
-//string name = Console.ReadLine();
-
-
-//if (name.Length > 1)
-//{
-//    Console.WriteLine("GOOD name VASIL");
-//}
-
-//else
-//{
-//    Console.WriteLine("TU SHO Dyrniy nepravilno");
-//}
-
-
-
-
-//----------------------------------3---------------------//
-
-Console.WriteLine("Enter your rechenya:");
-string rechenya = Console.ReadLine();
-
-
-if (rechenya.Length >= 20)
+void ShowLinia(int shirina, ConsoleColor color)
 {
-    string newrechenya = rechenya.Replace('.', '!');
-    Console.WriteLine("Great rechenya length!");
-    Console.WriteLine(newrechenya);
+    Console.ForegroundColor = color;
+    
+    for (int i = 1; i <= shirina; i++)
+    {
+        Console.Write(new string(c:' ',count: shirina - i));
+        Console.WriteLine(new string(c: '-', count: i*2));
+    }
+    Console.ResetColor();
 }
-else
-{ 
-    string newrechenya = rechenya.Replace('.', '/');
-    Console.WriteLine("rechenya too short!");
-    Console.WriteLine(newrechenya);
-}
-
+ShowLinia(shirina: 5, ConsoleColor.White);
+ShowLinia(shirina: 15, ConsoleColor.Blue);
+ShowLinia(shirina: 25, ConsoleColor.Red);
